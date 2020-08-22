@@ -23,7 +23,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final databaseReference = FirebaseFirestore.instance;
+  //final databaseReference = FirebaseFirestore.instance;
   
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void createRecord() {
-    databaseReference.collection('books').add({
+    FirebaseFirestore.instance.collection('books').add({
       'id': 1,
       'title': 'Flutter in Action',
       'description': 'Complete programming guide to learn Flutter'
